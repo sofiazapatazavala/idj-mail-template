@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>*|MC:SUBJECT|*</title>
     <style type="text/css">
+      /* Reset de Mailchimp */
       p{
   			margin:1em 0;
   			padding:0;
@@ -65,7 +66,372 @@
   		.templateContainer{
   			max-width:600px !important;
   		}
+      #templatePreheader{
+        padding-right:9px;
+        padding-left:9px;
+      }
+      #templatePreheader .columnContainer td{
+        padding:0 9px;
+      }
+      #footerContent{
+        padding-top:27px;
+        padding-bottom:18px;
+      }
+      #templateHeader,#templateBody,#templateFooter{
+        padding-right:18px;
+        padding-left:18px;
+      }
+      /* Editable: Cabeceras */
+      /*
+      @tab Page
+      @section Background Style
+      */
+        body,#bodyTable{
+          /*@editable*/background-color:#FAFAFA;
+        }
+      /*
+      @tab Page
+      @section Email Border
+      */
+        .templateContainer{
+          /*@editable*/border:0;
+        }
+      /*
+      @tab Page
+      @section Heading 1
+      */
+        h1{
+          /*@editable*/color:#222222;
+          /*@editable*/font-family:Helvetica;
+          /*@editable*/font-size:40px;
+          /*@editable*/font-style:normal;
+          /*@editable*/font-weight:bold;
+          /*@editable*/line-height:150%;
+          /*@editable*/letter-spacing:normal;
+          /*@editable*/text-align:left;
+        }
+      /*
+      @tab Page
+      @section Heading 2
+      */
+        h2{
+          /*@editable*/color:#222222;
+          /*@editable*/font-family:Helvetica;
+          /*@editable*/font-size:28px;
+          /*@editable*/font-style:normal;
+          /*@editable*/font-weight:bold;
+          /*@editable*/line-height:150%;
+          /*@editable*/letter-spacing:normal;
+          /*@editable*/text-align:left;
+        }
+      /*
+      @tab Page
+      @section Heading 3
+      */
+        h3{
+          /*@editable*/color:#444444;
+          /*@editable*/font-family:Helvetica;
+          /*@editable*/font-size:22px;
+          /*@editable*/font-style:normal;
+          /*@editable*/font-weight:bold;
+          /*@editable*/line-height:150%;
+          /*@editable*/letter-spacing:normal;
+          /*@editable*/text-align:left;
+        }
+      /*
+      @tab Page
+      @section Heading 4
+      */
+        h4{
+          /*@editable*/color:#999999;
+          /*@editable*/font-family:Georgia;
+          /*@editable*/font-size:20px;
+          /*@editable*/font-style:italic;
+          /*@editable*/font-weight:normal;
+          /*@editable*/line-height:150%;
+          /*@editable*/letter-spacing:normal;
+          /*@editable*/text-align:left;
+        }
 
+      /* Preheader y Header no se incluyen porque no se usan acá */
+
+      /*
+    	@tab Body
+    	@section Body Style
+    	*/
+    		#templateBody{
+    			/*@editable*/background-color:#FFFFFF;
+    			/*@editable*/background-image:none;
+    			/*@editable*/background-repeat:no-repeat;
+    			/*@editable*/background-position:center;
+    			/*@editable*/background-size:cover;
+    			/*@editable*/border-top:0;
+    			/*@editable*/border-bottom:2px solid #EAEAEA;
+    			/*@editable*/padding-top:0;
+    			/*@editable*/padding-bottom:9px;
+    		}
+    	/*
+    	@tab Body
+    	@section Body Text
+    	*/
+    		#templateBody,#templateBody p{
+    			/*@editable*/color:#606060;
+    			/*@editable*/font-family:Helvetica;
+    			/*@editable*/font-size:16px;
+    			/*@editable*/line-height:150%;
+    			/*@editable*/text-align:left;
+    		}
+    	/*
+    	@tab Body
+    	@section Body Link
+    	*/
+    		#templateBody a,#templateBody p a{
+    			/*@editable*/color:#237A91;
+    			/*@editable*/font-weight:normal;
+    			/*@editable*/text-decoration:underline;
+    		}
+
+      /* Estilos de Footer */
+
+      /*
+      @tab Footer
+      @section Footer Style
+      */
+        #templateFooter{
+          /*@editable*/background-color:#FAFAFA;
+          /*@editable*/background-image:none;
+          /*@editable*/background-repeat:no-repeat;
+          /*@editable*/background-position:center;
+          /*@editable*/background-size:cover;
+          /*@editable*/border-top:0;
+          /*@editable*/border-bottom:0;
+          /*@editable*/padding-top:36px;
+          /*@editable*/padding-bottom:9px;
+        }
+      /*
+      @tab Footer
+      @section Social Bar Style
+      */
+        #socialBar{
+          /*@editable*/background-color:#333333;
+          /*@editable*/border:0;
+          /*@editable*/padding:18px;
+        }
+      /*
+      @tab Footer
+      @section Social Bar Text
+      */
+        #socialBar,#socialBar p{
+          /*@editable*/color:#FFFFFF;
+          /*@editable*/font-family:Helvetica;
+          /*@editable*/font-size:12px;
+          /*@editable*/line-height:150%;
+          /*@editable*/text-align:center;
+        }
+      /*
+      @tab Footer
+      @section Social Bar Link
+      */
+        #socialBar a,#socialBar p a{
+          /*@editable*/color:#FFFFFF;
+          /*@editable*/font-weight:normal;
+          /*@editable*/text-decoration:underline;
+        }
+      /*
+      @tab Footer
+      @section Footer Text
+      */
+        #footerContent,#footerContent p{
+          /*@editable*/color:#656565;
+          /*@editable*/font-family:Helvetica;
+          /*@editable*/font-size:12px;
+          /*@editable*/line-height:150%;
+          /*@editable*/text-align:center;
+        }
+      /*
+      @tab Footer
+      @section Footer Link
+      */
+        #footerContent a,#footerContent p a{
+          /*@editable*/color:#656565;
+          /*@editable*/font-weight:normal;
+          /*@editable*/text-decoration:underline;
+        }
+      /*
+      @tab Footer
+      @section Utility Bar Style
+      */
+        #utilityBar{
+          /*@editable*/background-color:#FAFAFA;
+          /*@editable*/border:0;
+          /*@editable*/padding-top:9px;
+          /*@editable*/padding-bottom:9px;
+        }
+      /*
+      @tab Footer
+      @section Utility Bar Text
+      */
+        #utilityBar,#utilityBar p{
+          /*@editable*/color:#656565;
+          /*@editable*/font-family:Helvetica;
+          /*@editable*/font-size:12px;
+          /*@editable*/line-height:150%;
+          /*@editable*/text-align:center;
+        }
+      /*
+      @tab Footer
+      @section Utility Bar Link
+      */
+        #utilityBar a,#utilityBar p a{
+          /*@editable*/color:#656565;
+          /*@editable*/font-weight:normal;
+          /*@editable*/text-decoration:underline;
+        }
+
+      /* Estilos Responsive */
+      @media only screen and (max-width: 480px){
+        body,table,td,p,a,li,blockquote{
+          -webkit-text-size-adjust:none !important;
+        }
+
+      }	@media only screen and (max-width: 480px){
+          body{
+            width:100% !important;
+            min-width:100% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+          .templateImage{
+            width:100% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+          .columnContainer{
+            max-width:100% !important;
+            width:100% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+          .mobileHide{
+            display:none;
+          }
+
+      }	@media only screen and (max-width: 480px){
+          .utilityLink{
+            display:block;
+            padding:9px 0;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Heading 1
+        */
+          h1{
+            /*@editable*/font-size:22px !important;
+            /*@editable*/line-height:175% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Heading 2
+        */
+          h2{
+            /*@editable*/font-size:20px !important;
+            /*@editable*/line-height:175% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Heading 3
+        */
+          h3{
+            /*@editable*/font-size:18px !important;
+            /*@editable*/line-height:175% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Heading 4
+        */
+          h4{
+            /*@editable*/font-size:16px !important;
+            /*@editable*/line-height:175% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Preheader Visibility
+        */
+          #templatePreheader{
+            /*@editable*/display:block !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Preheader Text
+        */
+          #templatePreheader,#templatePreheader p{
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:150% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Header Text
+        */
+          #templateHeader,#templateHeader p{
+            /*@editable*/font-size:16px !important;
+            /*@editable*/line-height:150% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Body Text
+        */
+          #templateBody,#templateBody p{
+            /*@editable*/font-size:16px !important;
+            /*@editable*/line-height:150% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Footer Text
+        */
+          #templateFooter,#templateFooter p{
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:150% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Social Bar Text
+        */
+          #socialBar,#socialBar p{
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:150% !important;
+          }
+
+      }	@media only screen and (max-width: 480px){
+        /*
+        @tab Mobile Styles
+        @section Utility Bar Text
+        */
+          #utilityBar,#utilityBar p{
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:150% !important;
+          }
+
+      }
     </style>
   </head>
   <body>
