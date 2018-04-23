@@ -432,6 +432,24 @@
           }
 
       }
+
+      /* Custom styles */
+      a.fb::before, a.wsp::before, a.web::before {
+        padding: 0 5px;
+      }
+
+      a.fb::before {
+        content: url(https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/a12cc6ff-a8ad-4ce1-a2a1-49681364c3bc.png);
+      }
+      a.wsp::before {
+        content: url(https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/8ab6aad4-523f-411a-bcb4-8d946d35ce12.png);
+      }
+      a.web::before {
+        content: url(https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/3dab981f-ba3d-4ba0-9eb8-0415e422a73a.png);
+      }
+      td.contacto {
+        padding: 10px 0;
+      }
     </style>
   </head>
   <body>
@@ -442,7 +460,7 @@
         <tr>
           <td align="center" valign="top" id="bodyCell">
             <!-- Esta es la tabla interior, donde efectivamente irá el contenido. -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" id="templateBody">
               <tr>
                 <td colspan="2" align="center">
                   <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/edcb5e04-66fc-41d7-867a-1e25a9610727.png" alt="Robles del Volcán">
@@ -483,9 +501,9 @@
                   <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/c5aab7af-cf2f-45a4-a03b-24f85ee650d7.jpg" alt="">
                 </td>
               </tr>
-              <tr colspan="2">
-                <td mc:edit="contacto">
-                  Puedes contactarnos en: <a href="fb">Robles del Volcán</a> <a href="wsp">+5645 244 1725</a> <a href="http://www.idj.cl">www.idj.cl</a>
+              <tr>
+                <td colspan="2" class="contacto">
+                  Puedes contactarnos en:<a class="fb" href="#">Robles del Volcán</a> / <a class="wsp" href="#">+5645 244 1725</a> / <a class="web" href="http://www.idj.cl">www.idj.cl</a>
                 </td>
               </tr>
             </table>
@@ -496,12 +514,6 @@
           <td valign="top" id="templateFooter">
             <!-- Tabla de Footer -->
             <table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <!-- Disclaimer IDJ -->
-              <tr>
-                <td valign="top" id="imageDisclaimer">
-                  <small style="text-align: center;">Las imágenes contenidas en este formato son montajes fotográficos, bosquejos y croquis artísticos, elaborado con fines ilustrativos que no conforman una representación exacta de la realidad. En consecuencia, no forman parte de las condiciones ofrecidas al comprador. Medidas de superficie aproximadas.</small>
-                </td>
-              </tr>
               <!-- Código estándar de Mailchimp -->
               <tr>
                 <td valign="top" id="socialBar">
@@ -514,6 +526,8 @@
               <tr>
                 <td valign="top" id="footerContent">
                   <div mc:edit="footer_content">
+                    <p>Las imágenes contenidas en este formato son montajes fotográficos, bosquejos y croquis artísticos, elaborado con fines ilustrativos que no conforman una representación exacta de la realidad. En consecuencia, no forman parte de las condiciones ofrecidas al comprador. Medidas de superficie aproximadas.</p>
+
                     *|IF:LIST|*
                     <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
                     <br>
