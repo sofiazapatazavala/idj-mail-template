@@ -22,6 +22,7 @@
   			height:auto;
   			outline:none;
   			text-decoration:none;
+        max-width: 552px;
   		}
   		body,#bodyTable,#bodyCell{
   			height:100%;
@@ -57,14 +58,14 @@
   			line-height:inherit !important;
   		}
   		#bodyCell{
-  			padding:9px;
+  			padding:0;
   		}
   		.templateImage{
   			height:auto;
-  			max-width:564px;
+  			max-width:552px;
   		}
   		.templateContainer{
-  			max-width:600px !important;
+  			max-width:552px !important;
   		}
       #templatePreheader{
         padding-right:9px;
@@ -457,123 +458,133 @@
   <body>
     <!-- Centra el contenido -->
     <center>
-      <!-- El HTML de Mailchimp es tabla sobre tabla. Ésta es la tabla exterior -->
-      <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+      <!-- Tabla exterior -->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" height="100" width="100%" id="bodyTable">
         <tr>
-          <td width="24" valign="top">
-            <!-- Tabla sobre tabla para posicionar ese pedazo -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <td align="center" valign="top">
+            <!-- Tabla intermedia: Define el ancho total en 600px -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
               <tr>
-                <td height="265"></td>
-              </tr>
-              <tr>
-                <td><img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/abe23a19-b2ab-4441-bd4d-d5e311a92e33.jpg" alt=""></td>
-              </tr>
-            </table>
-          </td>
-          <td align="center" valign="top" id="bodyCell">
-            <!-- Esta es la tabla interior, donde efectivamente irá el contenido. -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" id="templateBody">
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/edcb5e04-66fc-41d7-867a-1e25a9610727.png" alt="Robles del Volcán">
+                <!-- Divisor para la imagen que sobresale -->
+                <td valign="top" width="24">
+                  <!-- Tabla para posicionarla -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td height="247"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/abe23a19-b2ab-4441-bd4d-d5e311a92e33.jpg" alt="" width="22"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="max-width: 552px!important;" id="bodyCell">
+                  <!-- Tabla interior: aquí va el contenido. -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" id="templateBody">
+                    <tr>
+                      <td colspan="2" align="center">
+                        <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/edcb5e04-66fc-41d7-867a-1e25a9610727.png" alt="Robles del Volcán">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" mc:edit="foto_header">
+                        <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/cc7278c9-22d0-464d-9613-eebe5a9730ab.jpg" alt="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="50%">
+                        <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/924f96e6-fcca-4518-9e21-f7491ce86101.jpg" alt="Vista del proyecto" class="centrar margen">
+                      </td>
+                      <td width="50%">
+                        <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/91de5224-6243-4bdc-8e3b-7ed74b496d25.jpg" alt="Vista del proyecto" class="centrar margen">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" mc:edit="titulo" class="edit-titulo">
+                        <h1>Departamentos 1 y 2 dormitorios</h1>
+                        <h2>A solo 5 minutos de Pucón</h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="edit-detalles">
+                        <div mc:edit="detalles">
+                          <p>Edificios con ascensor</p>
+                          <h3>DESDE<br><strong>UF 1.990</strong></h3>
+                          <p>El valor del departamento incluye estacionamiento.</p>
+                        </div>
+                        <div>
+                          <a href="http://www.idj.cl/"><img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/b5c2dfa3-13fa-40f9-9d9a-fa09dda78a85.png" alt="" class="centrar"></a>
+                        </div>
+                      </td>
+                      <td>
+                        <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/c5aab7af-cf2f-45a4-a03b-24f85ee650d7.jpg" alt="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="contacto">
+                        Puedes contactarnos en: <img class="social-logo" src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/a12cc6ff-a8ad-4ce1-a2a1-49681364c3bc.png" alt="Facebook"> <a href="https://www.facebook.com/roblesdelvolcan/">Robles del Volcán</a> / <img class="social-logo" src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/8ab6aad4-523f-411a-bcb4-8d946d35ce12.png" alt="Teléfono"> <a href="tel:+56452441725">+5645 244 1725</a> / <img class="social-logo" src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/3dab981f-ba3d-4ba0-9eb8-0415e422a73a.png" alt="Sitio web"><a href="http://www.idj.cl">www.idj.cl</a>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Fin tabla interior -->
+                </td>
+                <td style="max-width: 24px!important;">
+                  <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/ec436c15-bdd3-435e-9e01-bc4a417fd8bd.png" alt="">
                 </td>
               </tr>
+              <!-- Nueva fila en la tabla intermedia. Acá va todo lo de Mailchimp -->
               <tr>
-                <td colspan="2" mc:edit="foto_header">
-                  <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/cc7278c9-22d0-464d-9613-eebe5a9730ab.jpg" alt="">
-                </td>
-              </tr>
-              <tr>
-                <td width="50%">
-                  <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/924f96e6-fcca-4518-9e21-f7491ce86101.jpg" alt="Vista del proyecto" class="centrar margen">
-                </td>
-                <td width="50%">
-                  <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/91de5224-6243-4bdc-8e3b-7ed74b496d25.jpg" alt="Vista del proyecto" class="centrar margen">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" mc:edit="titulo" class="edit-titulo">
-                  <h1>Departamentos 1 y 2 dormitorios</h1>
-                  <h2>A solo 5 minutos de Pucón</h2>
-                </td>
-              </tr>
-              <tr>
-                <td class="edit-detalles">
-                  <div mc:edit="detalles">
-                    <p>Edificios con ascensor</p>
-                    <h3>DESDE<br><strong>UF 1.990</strong></h3>
-                    <p>El valor del departamento incluye estacionamiento.</p>
-                  </div>
-                  <div>
-                    <a href="http://www.idj.cl/"><img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/b5c2dfa3-13fa-40f9-9d9a-fa09dda78a85.png" alt="" class="centrar"></a>
-                  </div>
-                </td>
-                <td>
-                  <img src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/c5aab7af-cf2f-45a4-a03b-24f85ee650d7.jpg" alt="">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" class="contacto">
-                  Puedes contactarnos en: <img class="social-logo" src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/a12cc6ff-a8ad-4ce1-a2a1-49681364c3bc.png" alt="Facebook"> <a href="https://www.facebook.com/roblesdelvolcan/">Robles del Volcán</a> / <img class="social-logo" src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/8ab6aad4-523f-411a-bcb4-8d946d35ce12.png" alt="Teléfono"> <a href="tel:+56452441725">+5645 244 1725</a> / <img class="social-logo" src="https://gallery.mailchimp.com/234521560339029c8c7d895a4/images/3dab981f-ba3d-4ba0-9eb8-0415e422a73a.png" alt="Sitio web"><a href="http://www.idj.cl">www.idj.cl</a>
-                </td>
-              </tr>
-            </table>
-            <!-- Fin de la tabla sobre tabla -->
-          </td>
-        </tr>
-        <td width="24"></td>
-        <tr>
-          <td valign="top" colspan="3" id="templateFooter">
-            <!-- Tabla de Footer -->
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <!-- Código estándar de Mailchimp -->
-              <tr>
-                <td valign="top" id="footerContent">
-                  <div mc:edit="footer_content">
-                    <p>Las imágenes contenidas en este formato son montajes fotográficos, bosquejos y croquis artísticos, elaborado con fines ilustrativos que no conforman una representación exacta de la realidad. En consecuencia, no forman parte de las condiciones ofrecidas al comprador. Medidas de superficie aproximadas.</p>
+                <td valign="top" colspan="3" id="templateFooter">
+                  <!-- Tabla de Footer -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <!-- Código estándar de Mailchimp -->
+                    <tr>
+                      <td valign="top" id="footerContent">
+                        <div mc:edit="footer_content">
+                          <p>Las imágenes contenidas en este formato son montajes fotográficos, bosquejos y croquis artísticos, elaborado con fines ilustrativos que no conforman una representación exacta de la realidad. En consecuencia, no forman parte de las condiciones ofrecidas al comprador. Medidas de superficie aproximadas.</p>
 
-                    *|IF:LIST|*
-                    <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, todos los derechos reservados.</em>
-                    <br>
-                    <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                    *|LIST:DESCRIPTION|*
-                    <br>
-                    <strong>Nuestra dirección es:</strong>
-                    <br> *|HTML:LIST_ADDRESS_HTML|*
-                    <br>
-                    <!-- *|END:IF|* -->
-                    *|ELSE:|*
-                    <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                    <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, todos los derechos reservados.</em>
-                    <br>
-                    <strong>Nusetra dirección es:</strong>
-                    <br> *|USER:ADDRESS_HTML|*
-                    <!-- *|END:IF|* -->
-                    *|END:IF|*
-                  </div>
-                  <div mc:edit="monkeyrewards">
-                    *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td valign="top" id="utilityBar">
-                  <div mc:edit="utility_bar">
-                    <a href="*|UNSUB|*" class="utilityLink">Desuscribirme de esta lista</a><span class="mobileHide"> | </span><a href="*|UPDATE_PROFILE|*" class="utilityLink">Actualizar preferencias de suscripción</a>
-                    <!-- *|IFNOT:ARCHIVE_PAGE|* --><span class="mobileHide"> | </span><a href="*|ARCHIVE|*" class="utilityLink">Ver email en navegador</a>
-                    <!-- *|END:IF|* -->
-                  </div>
+                          *|IF:LIST|*
+                          <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, todos los derechos reservados.</em>
+                          <br>
+                          <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                          *|LIST:DESCRIPTION|*
+                          <br>
+                          <strong>Nuestra dirección es:</strong>
+                          <br> *|HTML:LIST_ADDRESS_HTML|*
+                          <br>
+                          <!-- *|END:IF|* -->
+                          *|ELSE:|*
+                          <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                          <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, todos los derechos reservados.</em>
+                          <br>
+                          <strong>Nusetra dirección es:</strong>
+                          <br> *|USER:ADDRESS_HTML|*
+                          <!-- *|END:IF|* -->
+                          *|END:IF|*
+                        </div>
+                        <div mc:edit="monkeyrewards">
+                          *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" id="utilityBar">
+                        <div mc:edit="utility_bar">
+                          <a href="*|UNSUB|*" class="utilityLink">Desuscribirme de esta lista</a><span class="mobileHide"> | </span><a href="*|UPDATE_PROFILE|*" class="utilityLink">Actualizar preferencias de suscripción</a>
+                          <!-- *|IFNOT:ARCHIVE_PAGE|* --><span class="mobileHide"> | </span><a href="*|ARCHIVE|*" class="utilityLink">Ver email en navegador</a>
+                          <!-- *|END:IF|* -->
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Fin tabla Mailchimp -->
                 </td>
               </tr>
             </table>
-
+            <!-- Fin tabla intermedia -->
           </td>
         </tr>
       </table>
+      <!-- Fin tabla exterior -->
     </center>
-
-
-
   </body>
 </html>
